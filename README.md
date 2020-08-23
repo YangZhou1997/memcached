@@ -15,6 +15,18 @@ https://memcached.org/timeouts
 https://memcached.org/ is a good resource in general. Please use the mailing
 list to ask questions, github issues aren't seen by everyone!
 
+## Build
+
+```
+autoreconf --install
+./configure --prefix=/usr/local/memcached
+make && make test && sudo make install
+# start a memcached with 64G memory and verbose output
+./memcached -m 65536 -vvv
+# start a memcached deamon with 64G memory 
+./memcached -m 65536 -d
+```
+
 ## Dependencies
 
 * libevent, https://www.monkey.org/~provos/libevent/ (libevent-dev)
