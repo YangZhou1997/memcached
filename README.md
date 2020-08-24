@@ -19,12 +19,13 @@ list to ask questions, github issues aren't seen by everyone!
 
 ```
 autoreconf --install
-./configure --prefix=/usr/local/memcached
-make && make test && sudo make install
+./configure && make && make test && sudo make install
+
 # start a memcached with 64G memory and verbose output
-./memcached -m 65536 -vvv
+./memcached -p 5001 -m 65536 -vvv
+
 # start a memcached deamon with 64G memory 
-./memcached -m 65536 -d
+./memcached -p 5001 -m 65536 -d
 ```
 
 ## Dependencies
