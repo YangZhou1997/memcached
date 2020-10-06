@@ -27,8 +27,8 @@ autoreconf --install
 # start a memcached deamon with 64G memory 
 ./memcached -p 5001 -m 65536 -d
 
-# start a memcached with 64G memory, 32 threads, and 32768 connections in maximum: 
-./memcached -p 5001 -m 65536 -t 32 -c 32768
+# start a memcached with 64G memory, 32 threads, and 409600 connections in maximum and 409600 tcp backlog queue: 
+./memcached -p 5001 -m 65536 -t 32 -c 409600 -b 409600
 ```
 
 ## Dependencies
